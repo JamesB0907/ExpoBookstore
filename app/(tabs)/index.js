@@ -5,19 +5,19 @@ const Storefront = () => {
   return (
     <ScrollView>
         <View style={styles.bookItem}>
-            <Image style={styles.bookImage} />
+            <Image style={styles.bookImage} source={require('../../assets/fellowship.png')}/>
             <Text style={styles.bookTitle}>Lord of the Rings: Fellowship of the Ring</Text>
             <Text style={styles.bookAuthor}>J. R. R. Tolkien</Text>
             <Text style={styles.bookPrice}>$4.99</Text>
         </View>
         <View style={styles.bookItem}>
-            <Image style={styles.bookImage}/>
+            <Image style={styles.bookImage} source={require('../../assets/leaves.png')}/>
             <Text style={styles.bookTitle}>House of Leaves</Text>
             <Text style={styles.bookAuthor}>Mark Z. Danielewski</Text>
             <Text style={styles.bookPrice}>$10.99</Text>
         </View>
         <View style={styles.bookItem}>
-            <Image style={styles.bookImage}/>
+            <Image style={styles.bookImage} source={require('../../assets/eloquent.png')}/>
             <Text style={styles.bookTitle}>Eloquent JavaScript</Text>
             <Text style={styles.bookAuthor}>Marijn Haverbeke</Text>
             <Text style={styles.bookPrice}>$20.99</Text>
@@ -33,10 +33,11 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 20,
     marginHorizontal: 30,
+    alignItems: 'center',
   },
   bookImage: {
-    width: 375,
-    height: 200,
+    width: 200,
+    height: 300,
   }
 })
 
