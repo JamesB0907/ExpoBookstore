@@ -2,12 +2,16 @@ import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SearchBar from "../../components/searchbar.js";
+import Logout from "../../components/logout.js";
 
 const Storefront = () => {
     return (
         <SafeAreaView>
             <ScrollView>
-                <SearchBar/>
+                <View style={styles.headContainer}>
+                    <SearchBar />
+                    <Logout />
+                </View>
                 <View style={styles.bookItem}>
                     <Image
                         style={styles.bookImage}
@@ -43,6 +47,10 @@ const Storefront = () => {
 };
 
 const styles = StyleSheet.create({
+    headContainer: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
     bookItem: {
         borderColor: "#B2AC88",
         borderWidth: 4,
