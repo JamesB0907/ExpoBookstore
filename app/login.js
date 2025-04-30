@@ -1,26 +1,57 @@
-import { Link } from "expo-router";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native"
+import { useRouter } from "expo-router";
 
 export default function Login() {
+    const router = useRouter();
+
     return (
-        <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.deviceContainer}>
             <View style={styles.container}>
-                <Text>Login</Text>
-                <TextInput placeholder="Email" />
-                <TextInput placeholder="Password" />
+                <Text style={styles.loginHeader}>Please Sign In Below</Text>
+                <TextInput style={styles.loginInput} placeholder="Email" />
+                <TextInput placeholder="Password" style={styles.loginInput} />
                 {/* Fake login button is a link */}
-                <Link href="(tabs)">Login</Link>
+                <TouchableOpacity style={styles.loginButton} onPress={() => router.navigate('/(tabs)')}>
+                    <Text style={{fontSize: 18}}>Login</Text>
+                </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
+    deviceContainer: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#fff",
     },
+    container: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "burlywood",
+        width: 300,
+        height: 300,
+        borderRadius: 20,
+    },
+    loginHeader: {
+        fontSize: 25,
+        marginBottom: 30,
+    },
+    loginInput: {
+        backgroundColor: "white",
+        borderRadius: 10,
+        width: 200,
+        margin: 10,
+        marginBottom: 20
+    },
+    loginButton: {
+        backgroundColor: "coral",
+        width: 90,
+        height: 40,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 8,
+    }
 });

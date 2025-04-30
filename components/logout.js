@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#B2AC88',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderRadius: 8,
     },
     text: {
         color: 'white',
