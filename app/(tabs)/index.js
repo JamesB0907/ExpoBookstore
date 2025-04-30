@@ -49,7 +49,11 @@ const Storefront = () => {
 const styles = StyleSheet.create({
     headContainer: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        // Suggestion: Add some padding and background color to make the header more visually distinct.
+        // Example:
+        // padding: 10,
+        // backgroundColor: '#f8f9fa',
     },
     bookItem: {
         borderColor: "#B2AC88",
@@ -58,11 +62,45 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         marginHorizontal: 30,
         alignItems: "center",
+        // Suggestion: Add a borderRadius to make the edges of the book item container rounded.
+        // Example:
+        // borderRadius: 10,
+        // Suggestion: Add a shadow effect to make the book items stand out more.
+        // Example:
+        // shadowColor: '#000',
+        // shadowOffset: { width: 0, height: 2 },
+        // shadowOpacity: 0.2,
+        // shadowRadius: 4,
+        // elevation: 5, // For Android shadow
     },
     bookImage: {
         width: 200,
         height: 300,
+        // Suggestion: Add a borderRadius to the book images for a softer look.
+        // Example:
+        // borderRadius: 10,
     },
+    // Suggestion: Add styles for bookTitle, bookAuthor, and bookPrice to improve text readability and hierarchy.
+    // Example:
+    // bookTitle: {
+    //     fontSize: 18,
+    //     fontWeight: 'bold',
+    //     marginTop: 10,
+    //     textAlign: 'center',
+    // },
+    // bookAuthor: {
+    //     fontSize: 14,
+    //     color: '#555',
+    //     marginTop: 5,
+    //     textAlign: 'center',
+    // },
+    // bookPrice: {
+    //     fontSize: 16,
+    //     color: '#28a745',
+    //     marginTop: 10,
+    //     fontWeight: 'bold',
+    //     textAlign: 'center',
+    // },
 });
 
 export default Storefront;
